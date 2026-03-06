@@ -1,10 +1,22 @@
+import { useState } from 'react'
 import Hero from './sections/Hero'
+import ContentSection from './sections/ContentSection'
+import Footer from './sections/Footer'
 
 function App() {
+  const [activeSection, setActiveSection] = useState('resume')
+
   return (
-    <>
-      <Hero />
-    </>
+    <main className="page-shell">
+      <div className="page-container">
+        <Hero
+          activeSection={activeSection}
+          setActiveSection={setActiveSection}
+        />
+        <ContentSection activeSection={activeSection} />
+        <Footer />
+      </div>
+    </main>
   )
 }
 
