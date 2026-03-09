@@ -28,7 +28,7 @@ function Contact() {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/riccardo-agostini-ago"
+          href="https://github.com/RiccardoAgos"
           target="_blank"
           rel="noreferrer"
           className="contact-preview-card"
