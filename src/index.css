@@ -103,12 +103,50 @@ button {
 }
 
 .hero-card {
+  position: relative;
   background-color: #1A1A25;
   border: 1px solid #2B2B36;
   border-radius: 28px;
   padding: 56px 48px;
   margin-bottom: 24px;
   text-align: center;
+}
+
+.language-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #343447;
+  border-radius: 999px;
+  background: rgba(15, 15, 19, 0.68);
+  backdrop-filter: blur(12px);
+}
+
+.language-chip {
+  min-width: 42px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #8f8b9c;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-chip:hover {
+  color: #fff;
+}
+
+.language-chip.active {
+  color: #fff;
+  background: linear-gradient(135deg, #4f88ff, #8b5cf6);
+  box-shadow: 0 5px 16px rgba(91, 79, 219, 0.32);
 }
 
 .hero-intro {
@@ -219,6 +257,15 @@ button {
 
   .hero-card h1 {
     font-size: 2.6rem;
+  }
+
+  .language-switch {
+    top: 14px;
+    right: 14px;
+  }
+
+  .hero-intro {
+    padding-top: 28px;
   }
 
   .hero-card h2 {
@@ -505,5 +552,541 @@ button {
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ==== Projects ==== */
+.projects-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.project-hero,
+.project-showcase,
+.project-roadmap {
+  border: 1px solid #343447;
+  border-radius: 24px;
+  background: #222230;
+}
+
+.project-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  min-height: 620px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 86% 14%, rgba(139, 92, 246, 0.28), transparent 38%),
+    linear-gradient(145deg, #252536 0%, #191923 72%);
+}
+
+.project-hero::after {
+  content: '';
+  position: absolute;
+  right: -90px;
+  bottom: -180px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(91, 67, 214, 0.2);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.project-copy {
+  position: relative;
+  z-index: 2;
+  padding: 38px 12px 38px 38px;
+}
+
+.project-kicker-row,
+.project-title-row,
+.project-actions,
+.project-tech-row,
+.roadmap-topline {
+  display: flex;
+  align-items: center;
+}
+
+.project-kicker-row {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.project-kicker,
+.project-live-badge,
+.project-eyebrow,
+.roadmap-version,
+.roadmap-status {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-kicker,
+.project-eyebrow {
+  color: #a98cff;
+}
+
+.project-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 11px;
+  border: 1px solid rgba(65, 206, 137, 0.34);
+  border-radius: 999px;
+  color: #91e9bd;
+  background: rgba(50, 173, 111, 0.08);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.project-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #41ce89;
+  box-shadow: 0 0 0 5px rgba(65, 206, 137, 0.11);
+}
+
+.project-title-row {
+  gap: 18px;
+}
+
+.project-app-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 22px;
+  box-shadow: 0 18px 38px rgba(14, 7, 36, 0.5);
+}
+
+.project-title-row h3 {
+  margin: 0 0 5px;
+  font-size: clamp(2.3rem, 5vw, 3.7rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.project-subtitle {
+  margin: 0;
+  color: #b9b4c8;
+  font-size: 1.02rem;
+}
+
+.project-description {
+  max-width: 590px;
+  margin: 28px 0 24px;
+  color: #dad7e4;
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+.project-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+  margin-bottom: 28px;
+}
+
+.project-feature {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  color: #c8c4d3;
+  font-size: 0.92rem;
+}
+
+.project-feature span {
+  color: #9e76ff;
+  font-weight: 800;
+}
+
+.project-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.store-button {
+  min-width: 168px;
+  min-height: 58px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid #46445a;
+  border-radius: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.store-button-primary {
+  background: #fff;
+  color: #101016;
+  border-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.store-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+}
+
+.store-button-disabled {
+  color: #aaa5b8;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.store-button-small {
+  font-size: 0.69rem;
+  line-height: 1.1;
+}
+
+.store-button strong {
+  margin-top: 2px;
+  font-size: 1rem;
+}
+
+.project-tech-row {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.project-tech-row span {
+  padding: 7px 10px;
+  border: 1px solid rgba(169, 140, 255, 0.18);
+  border-radius: 999px;
+  color: #bdb7ca;
+  background: rgba(132, 89, 255, 0.06);
+  font-size: 0.78rem;
+}
+
+.project-device-stage {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.project-device {
+  position: absolute;
+  overflow: hidden;
+  border: 7px solid #13131b;
+  border-radius: 38px;
+  background: #090a0e;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.48);
+}
+
+.project-device img,
+.project-screen-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-device-main {
+  z-index: 2;
+  width: 285px;
+  height: 618px;
+  top: 64px;
+  right: 38px;
+  transform: rotate(2.4deg);
+}
+
+.project-device-side {
+  z-index: 1;
+  width: 245px;
+  height: 532px;
+  top: 128px;
+  right: 245px;
+  opacity: 0.52;
+  transform: rotate(-8deg);
+}
+
+.project-showcase,
+.project-roadmap {
+  padding: 34px;
+}
+
+.project-section-heading {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 0.78fr);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.project-eyebrow {
+  margin: 0 0 9px;
+}
+
+.project-section-heading h3 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  letter-spacing: -0.025em;
+}
+
+.project-section-heading > p {
+  margin: 0;
+  color: #aaa6b6;
+  line-height: 1.65;
+}
+
+.project-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: end;
+}
+
+.project-screen-card {
+  padding: 15px;
+  border: 1px solid #3a394c;
+  border-radius: 20px;
+  background: #191922;
+}
+
+.project-screen-frame {
+  height: 330px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #0b0c10;
+}
+
+.project-screen-frame img {
+  object-position: top;
+}
+
+.project-screen-card-featured {
+  background: linear-gradient(180deg, rgba(129, 83, 244, 0.17), #191922 55%);
+  border-color: rgba(158, 118, 255, 0.4);
+}
+
+.project-screen-card > div:last-child {
+  padding: 18px 4px 4px;
+}
+
+.project-screen-card span {
+  color: #8f6bea;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.project-screen-card h4,
+.roadmap-card h4 {
+  margin: 7px 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.project-screen-card p,
+.roadmap-card p {
+  margin: 0;
+  color: #aaa6b6;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.roadmap-card {
+  position: relative;
+  min-height: 210px;
+  padding: 22px;
+  border: 1px solid #3a394c;
+  border-radius: 20px;
+  background: #191922;
+  overflow: hidden;
+}
+
+.roadmap-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: #514d62;
+}
+
+.roadmap-card-live::before {
+  background: #41ce89;
+}
+
+.roadmap-card-building::before {
+  background: #9e76ff;
+}
+
+.roadmap-card-next::before {
+  background: #5a92ff;
+}
+
+.roadmap-topline {
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.roadmap-version {
+  color: #fff;
+}
+
+.roadmap-status {
+  color: #8e899b;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.roadmap-card-live .roadmap-status {
+  color: #75dca8;
+}
+
+.roadmap-card-building .roadmap-status {
+  color: #b399ff;
+}
+
+@media (max-width: 980px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .project-copy {
+    padding: 34px 34px 0;
+  }
+
+  .project-device-stage {
+    min-height: 500px;
+  }
+
+  .project-device-main {
+    width: 250px;
+    height: 542px;
+    right: 15%;
+  }
+
+  .project-device-side {
+    width: 220px;
+    height: 477px;
+    right: 48%;
+  }
+}
+
+@media (max-width: 760px) {
+  .projects-layout {
+    gap: 20px;
+  }
+
+  .project-hero,
+  .project-showcase,
+  .project-roadmap {
+    border-radius: 20px;
+  }
+
+  .project-copy,
+  .project-showcase,
+  .project-roadmap {
+    padding: 24px;
+  }
+
+  .project-feature-grid,
+  .project-section-heading,
+  .project-screens-grid,
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-title-row {
+    align-items: flex-start;
+  }
+
+  .project-app-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
+  }
+
+  .project-title-row h3 {
+    font-size: 2.15rem;
+  }
+
+  .store-button {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .project-device-stage {
+    min-height: 430px;
+  }
+
+  .project-device-main {
+    width: 220px;
+    height: 477px;
+    top: 34px;
+    right: 8%;
+  }
+
+  .project-device-side {
+    width: 185px;
+    height: 401px;
+    top: 76px;
+    right: 47%;
+  }
+
+  .project-section-heading {
+    align-items: start;
+    gap: 13px;
+  }
+
+  .project-screen-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .project-screen-frame {
+    height: 245px;
+  }
+
+  .roadmap-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .project-kicker-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-device-stage {
+    min-height: 380px;
+  }
+
+  .project-device-main {
+    width: 195px;
+    height: 423px;
+    right: 2%;
+  }
+
+  .project-device-side {
+    width: 165px;
+    height: 358px;
+    right: 48%;
+  }
+
+  .project-screen-card {
+    grid-template-columns: 98px 1fr;
+    padding: 12px;
+  }
+
+  .project-screen-frame {
+    height: 205px;
   }
 }
