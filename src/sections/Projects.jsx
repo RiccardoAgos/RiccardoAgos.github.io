@@ -53,7 +53,7 @@ const copy = {
     roadmapEyebrow: 'Evoluzione del prodotto',
     roadmapTitle: 'Una roadmap concreta',
     roadmapDescription:
-      'La prima versione è pubblicata. Le prossime portano l’interazione dalla grafica alla conversazione, fino alla voce.',
+      'La prima versione è pubblicata. V2 introduce un assistente AI per gestire ExpenseMate tramite chat testuale e voce.',
     roadmap: [
       {
         version: 'V1',
@@ -66,18 +66,10 @@ const copy = {
       {
         version: 'V2',
         status: 'In sviluppo',
-        title: 'AI Assistant',
+        title: 'Assistente AI: chat e voce',
         description:
-          'Un assistente conversazionale per creare periodi, registrare spese e ottenere analisi con richieste naturali.',
+          'Un unico assistente AI per creare periodi, registrare spese e ottenere analisi: scrivi nella chat oppure parla e ricevi risposte vocali, con card interattive a supporto.',
         state: 'building',
-      },
-      {
-        version: 'V3',
-        status: 'Roadmap',
-        title: 'Voice AI',
-        description:
-          'La stessa esperienza dell’assistente, estesa alla voce per gestire le spese senza interrompere ciò che stai facendo.',
-        state: 'next',
       },
     ],
   },
@@ -133,7 +125,7 @@ const copy = {
     roadmapEyebrow: 'Product evolution',
     roadmapTitle: 'A concrete roadmap',
     roadmapDescription:
-      'The first version is live. The next releases move interaction from visual controls to conversation and, finally, voice.',
+      'The first version is live. V2 introduces an AI assistant for managing ExpenseMate through text chat and voice.',
     roadmap: [
       {
         version: 'V1',
@@ -146,18 +138,10 @@ const copy = {
       {
         version: 'V2',
         status: 'In development',
-        title: 'AI Assistant',
+        title: 'AI Assistant: chat and voice',
         description:
-          'A conversational assistant for creating periods, recording expenses and requesting analytics in natural language.',
+          'One AI assistant for creating periods, recording expenses and requesting analytics: type in the chat or speak and receive voice replies, supported by interactive cards.',
         state: 'building',
-      },
-      {
-        version: 'V3',
-        status: 'Roadmap',
-        title: 'Voice AI',
-        description:
-          'The same assistant experience extended to voice, making expense management possible without interrupting the task at hand.',
-        state: 'next',
       },
     ],
   },
