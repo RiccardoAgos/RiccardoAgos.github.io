@@ -174,22 +174,22 @@ const copy = {
 
 const screenshotPaths = {
   it: {
-    home: '/expensemate/v2/it/home.png',
-    expense: '/expensemate/v2/it/add-expense.png',
-    analytics: '/expensemate/v2/it/analytics.png',
-    planning: '/expensemate/v2/it/planning.png',
-    'assistant-chat': '/expensemate/v2/it/assistant-chat.png',
-    'assistant-voice': '/expensemate/v2/it/assistant-voice.png',
-    'assistant-intro': '/expensemate/v2/it/assistant-intro.png',
+    home: '/expensemate/v2/it/home.jpg',
+    expense: '/expensemate/v2/it/add-expense.jpg',
+    analytics: '/expensemate/v2/it/analytics.jpg',
+    planning: '/expensemate/v2/it/planning.jpg',
+    'assistant-chat': '/expensemate/v2/it/assistant-chat.jpg',
+    'assistant-voice': '/expensemate/v2/it/assistant-voice.jpg',
+    'assistant-intro': '/expensemate/v2/it/assistant-intro.jpg',
   },
   en: {
-    home: '/expensemate/v2/en/home.png',
-    expense: '/expensemate/v2/en/add-expense.png',
-    analytics: '/expensemate/v2/en/analytics.png',
-    planning: '/expensemate/v2/en/planning.png',
-    'assistant-chat': '/expensemate/v2/en/assistant-chat.png',
-    'assistant-voice': '/expensemate/v2/en/assistant-voice.png',
-    'assistant-intro': '/expensemate/v2/en/assistant-intro.png',
+    home: '/expensemate/v2/en/home.jpg',
+    expense: '/expensemate/v2/en/add-expense.jpg',
+    analytics: '/expensemate/v2/en/analytics.jpg',
+    planning: '/expensemate/v2/en/planning.jpg',
+    'assistant-chat': '/expensemate/v2/en/assistant-chat.jpg',
+    'assistant-voice': '/expensemate/v2/en/assistant-voice.jpg',
+    'assistant-intro': '/expensemate/v2/en/assistant-intro.jpg',
   },
 }
 
@@ -236,20 +236,18 @@ function Projects({ language }) {
 
           <div className="project-actions">
             <a
-              className="store-button store-button-primary"
+              className="store-download-badge"
               href={appStoreUrl}
               target="_blank"
               rel="noreferrer"
               aria-label={t.appStoreLabel}
             >
-              <span className="store-button-small">{t.appStoreSmall}</span>
-              <strong>App Store</strong>
+              <img src={`/store-badges/app-store-${language}.svg`} alt={t.appStoreLabel} width="180" height="60" />
             </a>
 
-            <a className="store-button store-button-primary" href={googlePlayUrl}
+            <a className="store-download-badge" href={googlePlayUrl}
               target="_blank" rel="noreferrer" aria-label={t.androidLabel}>
-              <span className="store-button-small">{t.playStoreSmall}</span>
-              <strong>Google Play</strong>
+              <img src={`/store-badges/google-play-${language}.png`} alt={t.androidLabel} width="206" height="80" />
             </a>
           </div>
 
@@ -264,7 +262,7 @@ function Projects({ language }) {
 
         <div className="project-device-stage" aria-label={t.previewLabel}>
           <img className="project-hero-art" src={screenshots.home}
-            alt={t.imageAlt.home} loading="eager" width="941" height="1672" />
+            alt={t.imageAlt.home} loading="eager" width="1206" height="2622" />
         </div>
       </section>
 
@@ -288,8 +286,8 @@ function Projects({ language }) {
                   src={screenshots[screen.image]}
                   alt={t.imageAlt[screen.image]}
                   loading="lazy"
-                  width="941"
-                  height="1672"
+                  width="1206"
+                  height="2622"
                 />
               </div>
               <div>
@@ -313,7 +311,7 @@ function Projects({ language }) {
         <div className="assistant-visuals-grid">
           {t.assistantVisuals.map((item) => (
             <figure className="assistant-visual" key={item.image}>
-              <img src={screenshots[item.image]} alt={item.alt} loading="lazy" width="941" height="1672" />
+              <img src={screenshots[item.image]} alt={item.alt} loading="lazy" width="1206" height="2622" />
               <figcaption>
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>

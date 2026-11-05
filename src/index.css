@@ -706,44 +706,28 @@ button {
   gap: 12px;
 }
 
-.store-button {
-  min-width: 168px;
-  min-height: 58px;
+.store-download-badge {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 10px 18px;
-  border: 1px solid #46445a;
-  border-radius: 15px;
-  color: #fff;
+  min-height: 80px;
   text-decoration: none;
 }
 
-.store-button-primary {
-  background: #fff;
-  color: #101016;
-  border-color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.store-download-badge img {
+  display: block;
+  width: auto;
+  height: 60px;
 }
 
-.store-button-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+.store-download-badge:nth-child(2) img {
+  height: 80px;
 }
 
-.store-button-disabled {
-  color: #aaa5b8;
-  background: rgba(255, 255, 255, 0.035);
-}
-
-.store-button-small {
-  font-size: 0.69rem;
-  line-height: 1.1;
-}
-
-.store-button strong {
-  margin-top: 2px;
-  font-size: 1rem;
+.store-download-badge:focus-visible {
+  outline: 2px solid #b799ff;
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .project-tech-row {
@@ -977,9 +961,8 @@ button {
     font-size: 2.15rem;
   }
 
-  .store-button {
-    flex: 1;
-    min-width: 140px;
+  .project-actions {
+    gap: 8px;
   }
 
   .project-device-stage {
