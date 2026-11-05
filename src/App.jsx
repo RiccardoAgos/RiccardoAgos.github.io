@@ -17,8 +17,8 @@ function App() {
 
   useEffect(() => {
     const descriptions = {
-      it: 'Portfolio di Riccardo Agostini, sviluppatore di applicazioni mobile e web specializzato in React, React Native e servizi cloud.',
-      en: 'Portfolio of Riccardo Agostini, a mobile and web developer focused on React, React Native and cloud services.',
+      it: 'Portfolio di Riccardo Agostini, sviluppatore di applicazioni mobile e web specializzato in React Native, servizi cloud e assistenti AI testuali e vocali.',
+      en: 'Portfolio of Riccardo Agostini, a mobile and web developer focused on React Native, cloud services and text and voice AI assistants.',
     }
 
     document.documentElement.lang = language

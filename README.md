@@ -1,7 +1,9 @@
 # Portfolio di Riccardo Agostini
 
 Portfolio personale sviluppato con React e Vite. Presenta il profilo
-professionale, i contatti e ExpenseMate, applicazione mobile pubblicata su iOS.
+professionale, i contatti e ExpenseMate, applicazione mobile per iOS e Android.
+Include la presentazione della V2 con assistente AI testuale e vocale, presentata
+come disponibile su entrambi gli store. Questa è una preparazione locale per il lancio: nessun deploy automatico. I contenuti sono disponibili in italiano e inglese.
 
 ## Sviluppo locale
 

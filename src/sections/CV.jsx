@@ -3,11 +3,11 @@ const copy = {
     eyebrow: 'Curriculum',
     profileTitle: 'Profilo professionale',
     profile:
-      'Software Developer con esperienza nello sviluppo di applicazioni mobile e web. Ho lavorato su progetti con React Native, AngularJS, backend services e integrazioni cloud. Ho seguito ExpenseMate dalla progettazione alla pubblicazione su App Store, maturando competenze anche in ambito IoT e didattica informatica.',
+      'Software Developer con esperienza nello sviluppo di applicazioni mobile e web. Ho lavorato su progetti con React Native, AngularJS, backend services e integrazioni cloud. Ho seguito ExpenseMate dalla progettazione alla pubblicazione su iOS e Android, sviluppando un assistente AI testuale e vocale con agenti specializzati e backend serverless. Ho esperienza anche in IoT e didattica informatica.',
     highlights: [
       ['Mobile', 'React Native'],
       ['Web', 'Frontend & Backend'],
-      ['Extra', 'Cloud & IoT'],
+      ['AI', 'Agenti & Voice UX'],
     ],
     experienceTitle: 'Esperienza',
     experiences: [
@@ -16,8 +16,8 @@ const copy = {
         company: 'ExpenseMate · Progetto indipendente',
         period: '2026 – oggi',
         description:
-          'Progettazione, sviluppo e pubblicazione di un’app mobile per la pianificazione delle spese, dall’esperienza React Native al backend AWS fino alla distribuzione su App Store.',
-        tech: ['React Native', 'Expo', 'AWS', 'App Store Connect'],
+          'Progettazione, sviluppo e pubblicazione di un’app mobile per la gestione delle spese. Nella V2 ho integrato un assistente AI con orchestrazione di agenti, piani per richieste multiple, workflow deterministici e conferme interattive. Ho sviluppato la pipeline di trascrizione e sintesi vocale, separato le memorie di chat e voce e implementato quote mensili e integrazione degli abbonamenti. Validazione con test automatici e prove su dispositivi iOS e Android.',
+        tech: ['React Native', 'TypeScript', 'OpenAI API', 'AWS Lambda', 'DynamoDB', 'RevenueCat'],
       },
       {
         role: 'Docente di Informatica',
@@ -49,17 +49,19 @@ const copy = {
       ['Laurea in Informatica Applicata', 'Università di Urbino'],
       ['Erasmus+ a Budapest', 'Università di Tecnologia e di Economia di Budapest'],
     ],
-    skillsTitle: 'Competenze tecniche',
+    skillsTitle: 'Competenze applicate',
+    skillsIntro: 'Dall’interfaccia al backend, fino alla voce: competenze messe in pratica nello sviluppo e nell’evoluzione di ExpenseMate.',
+    otherSkills: 'Altre esperienze: ESP32, IoT e didattica informatica.',
   },
   en: {
     eyebrow: 'Resume',
     profileTitle: 'Professional profile',
     profile:
-      'Software Developer experienced in building mobile and web applications. I have worked with React Native, AngularJS, backend services and cloud integrations. I took ExpenseMate from product design to App Store release, while also developing experience in IoT and computer science education.',
+      'Software Developer experienced in building mobile and web applications. I have worked with React Native, AngularJS, backend services and cloud integrations. I took ExpenseMate from product design to iOS and Android release, building a text and voice AI assistant with specialized agents and a serverless backend. I also have experience in IoT and computer science education.',
     highlights: [
       ['Mobile', 'React Native'],
       ['Web', 'Frontend & Backend'],
-      ['Beyond', 'Cloud & IoT'],
+      ['AI', 'Agents & Voice UX'],
     ],
     experienceTitle: 'Experience',
     experiences: [
@@ -68,8 +70,8 @@ const copy = {
         company: 'ExpenseMate · Independent project',
         period: '2026 – present',
         description:
-          'Designed, developed and published a mobile expense-planning product, from its React Native experience and AWS backend to its App Store release.',
-        tech: ['React Native', 'Expo', 'AWS', 'App Store Connect'],
+          'Designed, developed and published a mobile expense-management product. In V2, I integrated an AI assistant with agent orchestration, execution plans for multiple requests, deterministic workflows and interactive confirmations. I built the transcription and speech-synthesis pipeline, separated chat and voice memory, and implemented monthly quotas and subscription integration. Validated through automated tests and testing on iOS and Android devices.',
+        tech: ['React Native', 'TypeScript', 'OpenAI API', 'AWS Lambda', 'DynamoDB', 'RevenueCat'],
       },
       {
         role: 'Computer Science Teacher',
@@ -101,17 +103,21 @@ const copy = {
       ['BSc in Applied Computer Science', 'University of Urbino'],
       ['Erasmus+ in Budapest', 'Budapest University of Technology and Economics'],
     ],
-    skillsTitle: 'Technical skills',
+    skillsTitle: 'Skills in practice',
+    skillsIntro: 'From the interface to the backend and voice: skills applied while building and evolving ExpenseMate.',
+    otherSkills: 'Additional experience: ESP32, IoT and computer science education.',
   },
 }
 
-const skills = {
-  Frontend: ['React Native', 'React', 'AngularJS', 'JavaScript'],
-  Backend: ['Node.js', 'C#', 'SQL'],
-  Cloud: ['AWS Lambda', 'API Gateway', 'AWS Amplify'],
-  Product: ['Expo', 'EAS', 'App Store Connect'],
-  Other: ['ESP32', 'IoT', 'macOS'],
-}
+const skills = [
+  { title: { it: 'Mobile e interfacce', en: 'Mobile and interfaces' }, description: { it: 'Interfacce multipiattaforma, componenti riutilizzabili e flussi adattati a iOS e Android.', en: 'Cross-platform interfaces, reusable components and flows adapted to iOS and Android.' }, items: ['React Native', 'Expo', 'React', 'TypeScript', 'JavaScript', 'AngularJS'] },
+  { title: { it: 'Agenti AI', en: 'AI agents' }, description: { it: 'Orchestrazione di agenti specializzati, tool calling e piani di esecuzione per richieste multiple.', en: 'Specialized agent orchestration, tool calling and execution plans for multiple requests.' }, items: ['OpenAI API', 'Function calling', 'Multi-agent orchestration', 'Deterministic workflows'] },
+  { title: { it: 'Esperienza vocale', en: 'Voice experience' }, description: { it: 'Trascrizione, gestione dei turni, sintesi vocale e card interattive; sessioni voce e chat separate.', en: 'Transcription, turn handling, speech synthesis and interactive cards; separate voice and chat sessions.' }, items: ['Speech-to-text', 'Text-to-speech', 'Audio recording', 'Conversation state'] },
+  { title: { it: 'Backend e cloud', en: 'Backend and cloud' }, description: { it: 'API serverless, autenticazione, persistenza e permessi per operare sui dati del singolo utente.', en: 'Serverless APIs, authentication, persistence and permissions for working with each user’s data.' }, items: ['Node.js', 'AWS Lambda', 'API Gateway', 'DynamoDB', 'Cognito', 'IAM', 'AWS Amplify', 'C#', 'SQL'] },
+  { title: { it: 'Qualità e affidabilità', en: 'Quality and reliability' }, description: { it: 'Test di workflow e integrazioni, gestione delle ambiguità, timeout e conferme prima delle modifiche.', en: 'Workflow and integration tests, ambiguity resolution, timeouts and confirmation before changes.' }, items: ['Jest', 'Integration testing', 'Error handling', 'iOS / Android testing'] },
+  { title: { it: 'Prodotto e distribuzione', en: 'Product and delivery' }, description: { it: 'Build e distribuzione mobile, abbonamenti e quote mensili basate sulle operazioni completate.', en: 'Mobile builds and distribution, subscriptions and monthly quotas based on completed operations.' }, items: ['EAS', 'App Store Connect', 'Google Play Console', 'RevenueCat', 'Usage quotas'] },
+]
+
 
 function CV({ language }) {
   const t = copy[language]
@@ -161,7 +167,7 @@ function CV({ language }) {
         </div>
       </section>
 
-      <div className="cv-grid-2">
+      <div className="cv-education-section">
         <section className="cv-panel">
           <h3>{t.educationTitle}</h3>
 
@@ -173,15 +179,19 @@ function CV({ language }) {
           ))}
         </section>
 
-        <section className="cv-panel">
+      </div>
+
+        <section className="cv-panel cv-skills-panel">
           <h3>{t.skillsTitle}</h3>
+          <p className="cv-skills-intro">{t.skillsIntro}</p>
 
           <div className="cv-skills-groups">
-            {Object.entries(skills).map(([group, items]) => (
-              <div className="cv-skill-group" key={group}>
-                <h4>{group}</h4>
+            {skills.map((group) => (
+              <div className="cv-skill-group" key={group.title.en}>
+                <h4>{group.title[language]}</h4>
+                <p>{group.description[language]}</p>
                 <div className="cv-tags">
-                  {items.map((item) => (
+                  {group.items.map((item) => (
                     <span className="cv-tag" key={item}>
                       {item}
                     </span>
@@ -190,8 +200,8 @@ function CV({ language }) {
               </div>
             ))}
           </div>
+          <p className="cv-other-skills">{t.otherSkills}</p>
         </section>
-      </div>
     </div>
   )
 }

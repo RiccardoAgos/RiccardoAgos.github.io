@@ -3,7 +3,7 @@ const copy = {
     intro: 'Ciao, sono',
     role: 'Mobile & Web Developer',
     description:
-      'Progetto prodotti digitali completi: dall’esperienza mobile al backend, fino alla pubblicazione e all’evoluzione con strumenti AI.',
+      'Progetto prodotti digitali completi: dall’esperienza mobile al backend, fino alla pubblicazione e all’integrazione di assistenti AI testuali e vocali.',
     projects: 'Progetti',
     resume: 'CV',
     contact: 'Contattami',
@@ -13,7 +13,7 @@ const copy = {
     intro: 'Hi, I’m',
     role: 'Mobile & Web Developer',
     description:
-      'I build complete digital products: from mobile experience and backend architecture to publishing and AI-powered evolution.',
+      'I build complete digital products: from mobile experience and backend architecture to publishing and integrated text and voice AI assistants.',
     projects: 'Projects',
     resume: 'Resume',
     contact: 'Contact me',
