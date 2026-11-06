@@ -31,7 +31,6 @@ function App() {
 
   return (
     <main className="page-shell">
-      <div className="side-lines"></div>
       <div className="page-container">
         <Hero
           activeSection={activeSection}

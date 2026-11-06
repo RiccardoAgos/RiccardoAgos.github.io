@@ -26,7 +26,8 @@ function Hero({ activeSection, setActiveSection, language, setLanguage }) {
 
   return (
     <section className="hero-section">
-      <div className="hero-card">
+      <header className="site-header">
+        <span className="site-brand">Riccardo Agostini<span>.</span></span>
         <div className="language-switch" role="group" aria-label={t.languageLabel}>
           <button
             className={language === 'it' ? 'language-chip active' : 'language-chip'}
@@ -46,17 +47,22 @@ function Hero({ activeSection, setActiveSection, language, setLanguage }) {
           </button>
         </div>
 
+      </header>
+      <div className="hero-card">
+        <div className="hero-heading">
         <p className="hero-intro">{t.intro}</p>
 
         <h1>Riccardo Agostini</h1>
 
         <h2>{t.role}</h2>
 
+        </div>
         <p className="hero-description">{t.description}</p>
       </div>
 
       <div className="tabs-row">
         <button
+          aria-pressed={activeSection === 'projects'}
           className={activeSection === 'projects' ? 'tab-btn active' : 'tab-btn'}
           onClick={() => setActiveSection('projects')}
         >
@@ -64,6 +70,7 @@ function Hero({ activeSection, setActiveSection, language, setLanguage }) {
         </button>
 
         <button
+          aria-pressed={activeSection === 'resume'}
           className={activeSection === 'resume' ? 'tab-btn active' : 'tab-btn'}
           onClick={() => setActiveSection('resume')}
         >
@@ -71,6 +78,7 @@ function Hero({ activeSection, setActiveSection, language, setLanguage }) {
         </button>
 
         <button
+          aria-pressed={activeSection === 'contact'}
           className={activeSection === 'contact' ? 'tab-btn active' : 'tab-btn'}
           onClick={() => setActiveSection('contact')}
         >
