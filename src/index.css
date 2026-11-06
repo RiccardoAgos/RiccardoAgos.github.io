@@ -883,3 +883,15 @@ h4 {
   .cv-highlight-card strong { font-size: 16px; }
   .project-actions { gap: 8px; }
 }
+
+/* Official LinkedIn mark, with clear space and its original proportions. */
+.linkedin-logo {
+  display: block;
+  width: 28px;
+  height: auto;
+  margin: 7px;
+}
+.contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: minmax(0, 1fr); }
+}

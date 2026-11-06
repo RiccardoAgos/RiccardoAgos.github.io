@@ -52,7 +52,7 @@ function Contact({ language }) {
           className="contact-preview-card"
         >
           <div className="contact-preview-top">
-            <div className="contact-logo-placeholder">in</div>
+            <div className="contact-logo-placeholder"><img className="linkedin-logo" src="/social/linkedin-in-white.png" alt="" aria-hidden="true" /></div>
             <div>
               <h4>LinkedIn</h4>
               <p>Riccardo Agostini</p>
