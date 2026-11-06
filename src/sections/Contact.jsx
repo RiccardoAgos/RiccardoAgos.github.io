@@ -5,8 +5,6 @@ const copy = {
     lead: 'Sono disponibile per opportunità lavorative, collaborazioni su progetti software e contatti professionali in ambito mobile e web.',
     emailDescription: 'Il modo migliore per un primo contatto professionale.',
     emailCta: 'Scrivimi →',
-    githubDescription: 'Repository, codice e progetti mobile e web.',
-    githubCta: 'Visita profilo →',
     linkedinDescription: 'Profilo professionale, percorso e connessioni.',
     linkedinCta: 'Vai al profilo →',
   },
@@ -16,8 +14,6 @@ const copy = {
     lead: 'I’m open to job opportunities, software collaborations and professional conversations across mobile and web development.',
     emailDescription: 'The best way to start a professional conversation.',
     emailCta: 'Email me →',
-    githubDescription: 'Repositories, code and mobile and web projects.',
-    githubCta: 'View profile →',
     linkedinDescription: 'Professional profile, experience and connections.',
     linkedinCta: 'Open profile →',
   },
@@ -47,25 +43,6 @@ function Contact({ language }) {
           <p className="contact-preview-desc">{t.emailDescription}</p>
 
           <span className="contact-cta">{t.emailCta}</span>
-        </a>
-
-        <a
-          href="https://github.com/RiccardoAgos"
-          target="_blank"
-          rel="noreferrer"
-          className="contact-preview-card"
-        >
-          <div className="contact-preview-top">
-            <div className="contact-logo-placeholder">GH</div>
-            <div>
-              <h4>GitHub</h4>
-              <p>@RiccardoAgos</p>
-            </div>
-          </div>
-
-          <p className="contact-preview-desc">{t.githubDescription}</p>
-
-          <span className="contact-cta">{t.githubCta}</span>
         </a>
 
         <a
