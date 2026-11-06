@@ -23,13 +23,16 @@
     .icon { display: block; width: 158px; height: 158px; object-fit: cover; margin: 0 auto; border-radius: 34px; box-shadow: 0 18px 60px #10042055; }
     h1 { margin: 18px 0 34px; font-size: 34px; font-weight: 700; letter-spacing: -.04em; }
     .stores { display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap; }
-    .store { display: flex; align-items: center; justify-content: center; width: 174px; min-height: 60px; border-radius: 12px; background: #000; border: 1px solid #ffffff50; transition: transform .15s; }
+    .store { display: flex; align-items: center; justify-content: center; gap: 10px; width: 184px; height: 64px; padding: 10px 14px; text-decoration: none; color: #fff; text-align: left; border-radius: 12px; background: #000; border: 1px solid #ffffff50; transition: transform .15s; }
     .store:hover { transform: translateY(-2px); }
     .store:focus-visible { outline: 3px solid #ddc7ff; outline-offset: 5px; }
-    .store img { display: block; width: 148px; height: auto; }
-    .store.play img { width: 172px; }
+    .store svg { display: block; width: 28px; height: 32px; flex: 0 0 28px; }
+    .store-copy { display: flex; flex-direction: column; gap: 2px; white-space: nowrap; }
+    .store-copy small { font-size: 10px; line-height: 1.2; font-weight: 400; }
+    .store-copy strong { font-size: 19px; line-height: 1.15; font-weight: 600; letter-spacing: -.025em; }
     #status { min-height: 42px; max-width: 310px; margin: 25px auto 0; color: #e3d5f5; font-size: 14px; line-height: 1.5; }
-    @media (max-width: 380px) { .stores { gap: 12px; } .store { width: 150px; } .store img { width: 134px; } .store.play img { width: 148px; } }
+    @media (max-width: 430px) { .stores { gap: 10px; } .store { width: 158px; padding: 10px; gap: 8px; } .store-copy strong { font-size: 17px; } }
+    @media (max-width: 360px) { .stores { flex-direction: column; } .store { width: 184px; } }
     @media (prefers-reduced-motion: reduce) { .store { transition: none; } }
   </style>
 </head>
@@ -39,8 +42,8 @@
     <img class="icon" src="./icon.png" alt="Icona di ExpenseMate" width="158" height="158">
     <h1>ExpenseMate</h1>
     <div class="stores" aria-label="Scarica l’app">
-      <a class="store" id="app-store" href="https://apps.apple.com/app/id6792808041" aria-label="Scarica ExpenseMate su App Store"><img src="../store-badges/app-store-it.svg" alt="Scarica su App Store"></a>
-      <a class="store play" id="google-play" href="https://play.google.com/store/apps/details?id=com.riccardoagostini.expensemate" aria-label="Scarica ExpenseMate su Google Play"><img src="../store-badges/google-play-it.png" alt="Disponibile su Google Play"></a>
+      <a class="store" id="app-store" href="https://apps.apple.com/app/id6792808041" aria-label="Scarica ExpenseMate su App Store"><svg viewBox="0 0 24 28" aria-hidden="true"><path fill="currentColor" d="M17.4 4.5c1.1-1.3 1.8-3.1 1.6-4.5-1.6.1-3.5 1.1-4.6 2.4-1 1.1-1.8 2.9-1.6 4.4 1.8.1 3.5-.9 4.6-2.3ZM21.3 14.9c0-3.4 2.8-5 2.9-5.1-1.6-2.3-4-2.6-4.9-2.7-2.1-.2-4.1 1.3-5.2 1.3-1.1 0-2.7-1.3-4.5-1.2-2.3 0-4.4 1.3-5.6 3.3-2.4 4.1-.6 10.2 1.7 13.5 1.1 1.6 2.4 3.4 4.2 3.3 1.7-.1 2.3-1.1 4.4-1.1s2.6 1.1 4.5 1.1c1.9 0 3.1-1.7 4.2-3.3 1.3-1.9 1.8-3.8 1.9-3.9-.1 0-3.6-1.4-3.6-5.2Z" transform="translate(-2 0)"/></svg><span class="store-copy"><small>Scarica su</small><strong>App Store</strong></span></a>
+      <a class="store play" id="google-play" href="https://play.google.com/store/apps/details?id=com.riccardoagostini.expensemate" aria-label="Scarica ExpenseMate su Google Play"><svg viewBox="0 0 28 32" aria-hidden="true"><path fill="#3BCCFF" d="M1 1 16 16 1 31Z"/><path fill="#00E676" d="m1 1 18 10-3 5Z"/><path fill="#FFDA00" d="m19 11 8 4.5q1 .5 0 1L19 21l-5-5Z"/><path fill="#FF4B55" d="m1 31 18-10-3-5Z"/></svg><span class="store-copy"><small>Disponibile su</small><strong>Google Play</strong></span></a>
     </div>
     <p id="status" role="status"></p>
   </main>
